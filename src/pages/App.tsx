@@ -30,6 +30,7 @@ import Swap from './Swap'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
+import { INIT_CODE_HASH } from '@uniswap/sdk'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -74,6 +75,8 @@ function TopLevelModals() {
 }
 
 export default function App() {
+  console.log('init', INIT_CODE_HASH)
+
   return (
     <Suspense fallback={null}>
       <Route component={GoogleAnalyticsReporter} />
