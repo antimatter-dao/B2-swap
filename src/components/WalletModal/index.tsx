@@ -1,3 +1,4 @@
+import { ChainId } from '@uniswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
@@ -7,13 +8,13 @@ import ReactGA from 'react-ga'
 import styled from 'styled-components'
 import MetamaskIcon from '../../assets/images/metamask.png'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
-import { fortmatic, injected, portis } from '../../connectors'
+import { fortmatic, injected, NETWORK_CHAIN_ID, portis } from '../../connectors'
 import { OVERLAY_READY } from '../../connectors/Fortmatic'
-import { SUPPORTED_WALLETS } from '../../constants'
+import { SUPPORTED_NETWORKS, SUPPORTED_WALLETS } from '../../constants'
 import usePrevious from '../../hooks/usePrevious'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useWalletModalToggle } from '../../state/application/hooks'
-import { ExternalLink } from '../../theme'
+import { Button, ExternalLink } from '../../theme'
 import AccountDetails from '../AccountDetails'
 
 import Modal from '../Modal'
@@ -298,7 +299,21 @@ export default function WalletModal({
           <HeaderRow>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Error connecting'}</HeaderRow>
           <ContentWrapper>
             {error instanceof UnsupportedChainIdError ? (
-              <h5>Please connect to the appropriate Matter Chain.</h5>
+              <>
+                <h5>Please connect to the appropriate Matter Chain.</h5>
+                <Button
+                  onClick={() => {
+                    const id = NETWORK_CHAIN_ID
+                    if (!id) {
+                      return
+                    }
+                    const params = SUPPORTED_NETWORKS[id as ChainId]
+                    window.ethereum?.request?.({ method: 'wallet_addEthereumChain', params: [params, account] })
+                  }}
+                >
+                  Connect
+                </Button>
+              </>
             ) : (
               'Error connecting. Try refreshing the page.'
             )}
