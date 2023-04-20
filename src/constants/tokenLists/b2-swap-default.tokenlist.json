@@ -13,37 +13,6 @@
     "default"
   ],
   "tokens": [
-    {
-          "name": "Test1 Token",
-          "address": "0xC5804aC28Dda43e5FBA42095dcd546AbcE79d935",
-          "symbol": "Test1",
-          "decimals": 18,
-          "chainId": 20221,
-          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png"
-        },
-        {
-              "name": "Test2 Token",
-              "address": "0x8CF6430C3344c88F1C0BfC263af8FB7eD8692C37",
-              "symbol": "Test2",
-              "decimals": 18,
-              "chainId": 20221,
-              "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png"
-        },
-        {
-                  "name": "Test3 Token",
-                  "address": "0xACD805B5d65f634Ed04846C0D67BA51a475D7E3b",
-                  "symbol": "Test3",
-                  "decimals": 18,
-                  "chainId": 20221,
-                  "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png"
-        },
-        {
-                      "name": "Test4 Token",
-                      "address": "0x50345f9318da56d9f88cF80f259D259Cf8A8B9fE",
-                      "symbol": "Test4",
-                      "decimals": 18,
-                      "chainId": 20221,
-                      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png"
-        }
+
   ]
 }

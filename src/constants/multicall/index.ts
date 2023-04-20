@@ -2,7 +2,7 @@ import { ChainId } from '@uniswap/sdk'
 import MULTICALL_ABI from './abi.json'
 
 const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: '0xeB8A613D654F39e1031d2Ee36433151fc37bbBFa'
+  [ChainId.MAINNET]: '0xc1A04AAAD6ab57B0F11B656d09F68Be2d3cFf007'
 }
 
 export { MULTICALL_ABI, MULTICALL_NETWORKS }

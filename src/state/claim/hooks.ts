@@ -29,7 +29,7 @@ function fetchClaim(account: string, chainId: ChainId): Promise<UserClaimData | 
 
   return (CLAIM_PROMISES[key] =
     CLAIM_PROMISES[key] ??
-    fetch('https://merkle-drop-1.uniswap.workers.dev/', {
+    fetch('/', {
       body: JSON.stringify({ chainId, address: formatted }),
       headers: {
         'Content-Type': 'application/json',

@@ -29,12 +29,12 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [20221]
+  supportedChainIds: [1990]
 })
 
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
-  rpc: { 20221: NETWORK_URL },
+  rpc: { 1990: NETWORK_URL },
   bridge: WALLETCONNECT_BRIDGE_URL,
   qrcode: true,
   pollingInterval: 15000

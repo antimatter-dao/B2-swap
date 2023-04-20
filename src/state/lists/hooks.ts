@@ -88,7 +88,7 @@ export function useAllLists(): {
 
 function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddressMap {
   return {
-    20221: { ...map1[20221], ...map2[20221] }
+    1990: { ...map1[1990], ...map2[1990] }
   }
 }
 
