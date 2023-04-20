@@ -218,14 +218,14 @@ export const SUPPORTED_NETWORKS: {
   }
 } = {
   [ChainId.MAINNET]: {
-    chainId: '0x4efd',
-    chainName: 'Matter Chain',
+    chainId: '0x7c6',
+    chainName: 'B2 Chain',
     nativeCurrency: {
       name: 'Matter Coin',
       symbol: 'MATTER',
       decimals: 18
     },
-    rpcUrls: ['https://bastest-rpc.antimatter.finance'],
-    blockExplorerUrls: ['https://bastest-explorer.antimatter.finance/']
+    rpcUrls: ['https://rpc.antimatter.finance'],
+    blockExplorerUrls: ['https://b2-explorer.antimatter.finance/']
   }
 }

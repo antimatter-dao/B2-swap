@@ -26,7 +26,7 @@ export function getEtherscanLink(
   data: string,
   type: 'transaction' | 'token' | 'address' | 'block'
 ): string {
-  const prefix = `https://bastest-explorer.antimatter.finance/`
+  const prefix = `https://b2-explorer.antimatter.finance/`
 
   switch (type) {
     case 'transaction': {
